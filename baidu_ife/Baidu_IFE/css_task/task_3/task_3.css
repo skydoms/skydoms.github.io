@@ -1,0 +1,66 @@
+.team{
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #999;
+    background-color: #eee;
+}
+.team-introduce-wrapper,.team-mian,.side{
+    float: left;
+}
+.team-introduce,.team-mian,.side{
+    border: 1px solid #999;
+}
+.team-mian{
+    margin-left: -100%;
+    overflow: hidden;
+    width: 200px;
+    padding: 20px;
+    background: #fff;
+
+}
+
+.team-logo{
+    float: left;
+    /*浮动无法撑开高度，解决方法在父元素添加overflow*/
+    width: 100px;
+    height: 100px;
+    background:url("../../team-logo.jpg") no-repeat;
+    background-size: 100% 100%;
+    /*一个值：设置宽度，第二值默认为auto（图片自身大小）*/
+    /*两个值：设置图片宽和高*/
+    /*理解cover和contain之间的区别*/
+}
+.team-name{
+    float: right;
+}
+.team-introduce-wrapper{
+    width: 100%;
+    float: left;
+}
+
+.team-introduce{
+    margin-left: 260px;
+    margin-right: 140px;
+    padding: 20px;
+    background-color: #fff;
+}
+.special{
+    padding: 10px 0;
+}
+.side{
+    margin-left: -122px;
+    float: left;
+    width: 80px;
+    padding: 20px;
+    background-color: #fff;
+}
+.own-card{
+    width: 80px;
+    height: 80px;
+    background:url("../../own-card.jpg");
+    background-size: 100% 100%;
+}
+.own-card+.own-card{
+    margin-top: 20px;
+}
