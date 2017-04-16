@@ -241,7 +241,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/前端技术学院实战/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/CSS常用水平垂直居中方式/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Skydoms">
@@ -266,7 +266,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/13/前端技术学院实战/" itemprop="url">
+                <a class="post-title-link" href="/2017/04/13/CSS常用水平垂直居中方式/" itemprop="url">
                   CSS常用水平垂直居中方式
                 </a>
               
@@ -297,8 +297,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/04/13/前端技术学院实战/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/13/前端技术学院实战/" itemprop="commentCount"></span>
+                <a href="/2017/04/13/CSS常用水平垂直居中方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/13/CSS常用水平垂直居中方式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -326,8 +326,10 @@
       
         
           
-            <p>#demo</p>
-<h2 id="css任务"><a href="#css任务" class="headerlink" title="css任务"></a>css任务</h2>
+            <h2 id="行内元素居中"><a href="#行内元素居中" class="headerlink" title="行内元素居中"></a>行内元素居中</h2><h3 id="1-text-align-center-——-实现行内元素居中。"><a href="#1-text-align-center-——-实现行内元素居中。" class="headerlink" title="1,text-align : center —— 实现行内元素居中。"></a>1,text-align : center —— 实现行内元素居中。</h3><h3 id="2-line-height：父元素的高度-——-实现单行文本垂直居中。"><a href="#2-line-height：父元素的高度-——-实现单行文本垂直居中。" class="headerlink" title="2,line-height：父元素的高度 —— 实现单行文本垂直居中。"></a>2,line-height：父元素的高度 —— 实现单行文本垂直居中。</h3><h3 id="3-display-table-cell，vertical-align-middle-——-实现行内元素垂直居中-多用于多行文本-。"><a href="#3-display-table-cell，vertical-align-middle-——-实现行内元素垂直居中-多用于多行文本-。" class="headerlink" title="3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。"></a>3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。</h3><h2 id="块级元素居中"><a href="#块级元素居中" class="headerlink" title="块级元素居中"></a>块级元素居中</h2><h3 id="1-元素定宽-margin-0-auto-——-实现水平居中。"><a href="#1-元素定宽-margin-0-auto-——-实现水平居中。" class="headerlink" title="1, 元素定宽 + margin: 0 auto —— 实现水平居中。"></a>1, 元素定宽 + margin: 0 auto —— 实现水平居中。</h3><p>Q: 为什么能margin:0 auto能实现水平居中？<br>A: 水平方向的margin,其计算值取决于可用空间（剩余空间）。那么margin-left:auto实现的是右对齐,相反margin-right实现的是左对齐，所以margin: 0 auto可以实现水平居中。<br>Q: margin:0 auto 是否等于margin: auto？<br>A: 大多情况下等于，一般来说margin-top，和bottom计算值为0。<br>Q： margin:auto 0 为什么无法实现垂直居中？<br>A： 有人说是因为元素高度不确定，有人W3C没有给出相关规定，一直没有找到满意的答案。</p>
+<h3 id="2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。"><a href="#2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。" class="headerlink" title="2，absolute/fixed : top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。"></a>2，absolute/fixed : top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。</h3><p>Q: 怎么实现的？<br>A: 以水平居中来说，absolute/fixed的百分比单位相对于父元素的宽，也就是该元素向右偏移父元素一半的距离，而该元素的左侧边框是父元素中分线，所以再将该元素向右偏移自身元素的一半就可水平居中，垂直居中同理。</p>
+<p>补充: 如果不知道该元素的宽高，可以用translate:(-50%,-50%)来实现，该百分比参照物相对自身宽高。</p>
+
           
         
       
