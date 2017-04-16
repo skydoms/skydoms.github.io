@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。  
+<meta name="description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本，也可以将子元素设置inline-block来实现块级居中)。  
 块级元素居中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS常用水平垂直居中方式">
 <meta property="og:url" content="http://yoursite.com/2017/04/13/CSS常用水平垂直居中方式/index.html">
 <meta property="og:site_name" content="Skydoms">
-<meta property="og:description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。  
+<meta property="og:description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本，也可以将子元素设置inline-block来实现块级居中)。  
 块级元素居中">
-<meta property="og:updated_time" content="2017-04-16T07:33:01.569Z">
+<meta property="og:updated_time" content="2017-04-16T07:40:56.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS常用水平垂直居中方式">
-<meta name="twitter:description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。  
+<meta name="twitter:description" content="行内元素居中 1,text-align : center —— 实现行内元素居中。 2,line-height：父元素的高度 —— 实现单行文本垂直居中。 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本，也可以将子元素设置inline-block来实现块级居中)。  
 块级元素居中">
 
 
@@ -323,11 +323,22 @@
       
 
       
-        <h2 id="行内元素居中"><a href="#行内元素居中" class="headerlink" title="行内元素居中"></a>行内元素居中</h2><p> 1,text-align : center —— 实现行内元素居中。<br> 2,line-height：父元素的高度 —— 实现单行文本垂直居中。<br> 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本)。  </p>
+        <h2 id="行内元素居中"><a href="#行内元素居中" class="headerlink" title="行内元素居中"></a>行内元素居中</h2><p> 1,text-align : center —— 实现行内元素居中。<br> 2,line-height：父元素的高度 —— 实现单行文本垂直居中。<br> 3,display:table-cell，vertical-align:middle —— 实现行内元素垂直居中(多用于多行文本，也可以将子元素设置inline-block来实现块级居中)。  </p>
 <h2 id="块级元素居中"><a href="#块级元素居中" class="headerlink" title="块级元素居中"></a>块级元素居中</h2><a id="more"></a>
-<h3 id="1-元素定宽-margin-0-auto-——-实现水平居中。"><a href="#1-元素定宽-margin-0-auto-——-实现水平居中。" class="headerlink" title="1, 元素定宽 + margin: 0 auto —— 实现水平居中。"></a>1, 元素定宽 + margin: 0 auto —— 实现水平居中。</h3><p>Q: 为什么能margin:0 auto能实现水平居中？<br>A: 水平方向的margin,其计算值取决于可用空间（剩余空间）。那么margin-left:auto实现的是右对齐,相反margin-right实现的是左对齐，所以margin: 0 auto可以实现水平居中。<br>Q: margin:0 auto 是否等于margin: auto？<br>A: 大多情况下等于，一般来说margin-top，和bottom计算值为0。<br>Q： margin:auto 0 为什么无法实现垂直居中？<br>A： 有人说是因为元素高度不确定，有人W3C没有给出相关规定，一直没有找到满意的答案。</p>
-<h3 id="2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。"><a href="#2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。" class="headerlink" title="2，absolute/fixed : top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。"></a>2，absolute/fixed : top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。</h3><p>Q: 怎么实现的？<br>A: 以水平居中来说，absolute/fixed的百分比单位相对于父元素的宽，也就是该元素向右偏移父元素一半的距离，而该元素的左侧边框是父元素中分线，所以再将该元素向右偏移自身元素的一半就可水平居中，垂直居中同理。</p>
+<h3 id="1-元素定宽-margin-0-auto-——-实现水平居中。"><a href="#1-元素定宽-margin-0-auto-——-实现水平居中。" class="headerlink" title="1, 元素定宽 + margin: 0 auto —— 实现水平居中。"></a>1, 元素定宽 + margin: 0 auto —— 实现水平居中。</h3><p>Q: 为什么margin:0 auto能实现水平居中？<br>A: 水平方向的margin,其计算值取决于可用空间（剩余空间）。那么margin-left:auto实现的是右对齐,相反margin-right实现的是左对齐，所以margin: 0 auto可以实现水平居中。</p>
+<p>Q: margin:0 auto 是否等于margin: auto？<br>A: 大多情况下等于，一般来说margin-top，和bottom计算值为0。</p>
+<p>Q： margin:auto 0 为什么无法实现垂直居中？<br>A： 有人说是因为元素高度不确定，有人W3C没有给出相关规定，一直没有找到满意的答案。</p>
+<h3 id="2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。"><a href="#2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。" class="headerlink" title="2，absolute/fixed + top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。"></a>2，absolute/fixed + top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。</h3><p>Q: 怎么实现的？<br>A: 以水平居中来说，absolute/fixed的百分比单位相对于父元素的宽，也就是该元素向右偏移父元素一半的距离，而该元素的左侧边框是父元素中分线，所以再将该元素向右偏移自身元素的一半就可水平居中，垂直居中同理。</p>
 <p>补充: 如果不知道该元素的宽高，可以用translate:(-50%,-50%)来实现，该百分比参照物相对自身宽高。</p>
+<h3 id="3-margin-auto-实现水平垂直居中。"><a href="#3-margin-auto-实现水平垂直居中。" class="headerlink" title="3,margin:auto 实现水平垂直居中。"></a>3,margin:auto 实现水平垂直居中。</h3><p><code>box{
+    position: absolute;或fixed
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin: auto;
+}</code><br>Q:怎么实现的？<br>A：待续。</p>
+<h5 id="4-flex-布局-justify-content-center-align-items-center"><a href="#4-flex-布局-justify-content-center-align-items-center" class="headerlink" title="4,flex 布局 justify-content: center; align-items:center;"></a>4,flex 布局 justify-content: center; align-items:center;</h5><p>常用于移动端，PC兼容性较差。</p>
 
       
     </div>
@@ -498,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行内元素居中"><span class="nav-number">1.</span> <span class="nav-text">行内元素居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素居中"><span class="nav-number">2.</span> <span class="nav-text">块级元素居中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-元素定宽-margin-0-auto-——-实现水平居中。"><span class="nav-number">2.1.</span> <span class="nav-text">1, 元素定宽 + margin: 0 auto —— 实现水平居中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。"><span class="nav-number">2.2.</span> <span class="nav-text">2，absolute/fixed : top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行内元素居中"><span class="nav-number">1.</span> <span class="nav-text">行内元素居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素居中"><span class="nav-number">2.</span> <span class="nav-text">块级元素居中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-元素定宽-margin-0-auto-——-实现水平居中。"><span class="nav-number">2.1.</span> <span class="nav-text">1, 元素定宽 + margin: 0 auto —— 实现水平居中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，absolute-fixed-top-left：50-margin-left-top-自身宽度的一半-——-实现水平垂直居中。"><span class="nav-number">2.2.</span> <span class="nav-text">2，absolute/fixed + top/left：50% + margin-left/top:-(自身宽度的一半) —— 实现水平垂直居中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-margin-auto-实现水平垂直居中。"><span class="nav-number">2.3.</span> <span class="nav-text">3,margin:auto 实现水平垂直居中。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-flex-布局-justify-content-center-align-items-center"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">4,flex 布局 justify-content: center; align-items:center;</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
