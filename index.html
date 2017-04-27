@@ -334,12 +334,25 @@
     return a*b;    
 }</code></p>
 <ol>
-<li><p>函数表达式：<br><code>var func = function(a,b){
- return a*b;
+<li>函数表达式：</li>
+</ol>
+<p><code>var func = function(a,b){
+    return a*b;
 }</code></p>
-</li>
-<li><p>对象实例化(基本不用)：<br><code>var func = new Function(&#39;a&#39;,&#39;b&#39;,&#39;return (a*b)&#39;);</code></p>
-</li>
+<ol>
+<li>对象实例化(基本不用)：</li>
+</ol>
+<p><code>var func = new Function(&#39;a&#39;,&#39;b&#39;,&#39;return (a*b)&#39;);</code></p>
+<p><strong>函数声明之间的区别</strong></p>
+<ol>
+<li>函数声明和函数表达式，对象实例化的区别：<br>前者在编译之前，会声明提前，后者则不会。</li>
+</ol>
+<p><code>fun1(3,3);//9</code></p>
+<p><code>fun2(3,3);//func2 is not defined</code></p>
+<p><code>function func1(a,b){ return a*b };</code></p>
+<p><code>var func2 = function(){return a*b };</code></p>
+<ol>
+<li>对象实例化与函数声明，函数表达式的区别：</li>
 </ol>
 
           
