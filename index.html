@@ -326,7 +326,7 @@
       
         
           
-            <h2 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h2><p><strong>函数声明方式：</strong></p>
+            <h2 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h2><p><strong>函数定义方式：</strong></p>
 <ol>
 <li>函数声明：</li>
 </ol>
@@ -343,17 +343,20 @@
 <li>对象实例化(基本不用)：</li>
 </ol>
 <p><code>var func = new Function(&#39;a&#39;,&#39;b&#39;,&#39;return (a*b)&#39;);</code></p>
-<p><strong>函数声明之间的区别</strong></p>
+<p><strong>函数定义的区别</strong></p>
 <ol>
 <li>函数声明和函数表达式，对象实例化的区别：<br>前者在编译之前，会声明提前，后者则不会。</li>
 </ol>
-<p><code>fun1(3,3);//9</code></p>
-<p><code>fun2(3,3);//func2 is not defined</code></p>
-<p><code>function func1(a,b){ return a*b };</code></p>
-<p><code>var func2 = function(){return a*b };</code></p>
+<p>``<br>fun1(3,3);//9</p>
+<p>fun2(3,3);//func2 is not defined</p>
+<p>function func1(a,b){ return a*b };</p>
+<p>var func2 = function(){return a*b };</p>
+<p>``</p>
 <ol>
-<li>对象实例化与函数声明，函数表达式的区别：</li>
+<li>对象实例化与函数声明，函数表达式的区别：<br>对象实例化无法访问到函数之外的变量，后者可以。<br>如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line">        var i = 10;</div><div class="line">        function func(j) &#123;</div><div class="line">            console.log(i+j);//i = 10;</div><div class="line">            debugger;</div><div class="line">        &#125;</div><div class="line">        func(1);</div><div class="line">    &#125;)();</div></pre></td></tr></table></figure>
+</li>
 </ol>
+<p><strong>对象实例化定义的函数都会定义在全局作用域上</strong></p>
 
           
         
