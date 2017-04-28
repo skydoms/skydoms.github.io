@@ -122,7 +122,7 @@ var func = function(a,b){
 对象实例化(基本不用)：
 
 var func = new Function(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;return (a*b)&amp;#39;)">
-<meta property="og:updated_time" content="2017-04-28T00:13:21.508Z">
+<meta property="og:updated_time" content="2017-04-28T00:38:33.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础">
 <meta name="twitter:description" content="函数：函数定义方式：
@@ -395,6 +395,20 @@ var func = new Function(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;return 
 </li>
 </ol>
 <p><strong>对象实例化定义的函数都会定义在全局作用域上</strong></p>
+<p><strong>作用域</strong></p>
+<ul>
+<li>JS分为函数作用域和全局作用域。</li>
+<li>函数作用域可以访问全局作用域，反之不能。</li>
+<li>如果函数作用和全局作用域有相同的变量，则会使用就近原则。</li>
+</ul>
+<p><strong>参数</strong></p>
+<p>实参：调用函数的参数称为实参。<br>形参：定义函数的参数称为形参。</p>
+<ul>
+<li><p>实参少于行参:少于的形参会变成undefined;</p>
+</li>
+<li><p>实参多于行参:多余的实参会忽略掉，且程序不会报错。</p>
+</li>
+</ul>
 
       
     </div>
